@@ -1,4 +1,5 @@
 import React from "react";
+import { FaRegCopyright } from "react-icons/fa6";
 
 const footer = () => {
   return (
@@ -9,15 +10,16 @@ const footer = () => {
             <div className="justify-start items-center gap-[668px] inline-flex">
               <div className="justify-start items-center gap-2.5 flex">
                 <div className="w-6 h-6 p-0.5 justify-center items-center flex" />
-                <div className="text-zinc-900 text-lg font-medium font-['Manrope'] leading-tight">
-                  Talup 2023. All rights reserved
+                <div className="text-zinc-900 text-lg font-medium font-['Manrope'] flex gap-2 leading-tight whitespace-nowrap">
+                  <FaRegCopyright />
+                  <span>Talup 2023. All rights reserved</span>
                 </div>
               </div>
               <div className="justify-start items-start gap-[52px] flex">
-                <div className="text-zinc-900 text-lg font-normal font-['Manrope'] underline leading-tight">
+                <div className="text-zinc-900 text-lg font-normal font-['Manrope']  leading-tight whitespace-nowrap">
                   Terms & Conditions
                 </div>
-                <div className="text-zinc-900 text-lg font-normal font-['Manrope'] underline leading-tight">
+                <div className="text-zinc-900 text-lg font-normal font-['Manrope'] leading-tight whitespace-nowrap">
                   Privacy Policy
                 </div>
               </div>

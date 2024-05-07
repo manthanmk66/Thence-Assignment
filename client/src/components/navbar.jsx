@@ -5,7 +5,6 @@ const Navbar = () => {
   return (
     <div>
       <div className="w-[1392px] h-[111.17px] pl-[52.22px] pr-[20.89px] py-[16.97px] bg-white/opacity-80 rounded-[65.28px] border border-gray-200 backdrop-blur-[31.33px] justify-between items-center inline-flex">
-        {/* Place the image here */}
         <img className="" src={logo} alt="logo"></img>
         <div className="w-[127.94px] h-[47.39px] relative" />
         <div className="justify-end items-center gap-[15.67px] flex">

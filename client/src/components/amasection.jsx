@@ -11,7 +11,7 @@ const amasection = () => {
             src={Union}
           />
           <div className="left-[94.50px] top-[80px] absolute flex-col justify-center items-start gap-5 inline-flex">
-            <div className="text-neutral-400 text-[32px] font-normal font-['Covered By Your Grace'] leading-9">
+            <div className="text-neutral-400 text-[32px] font-normal font-abc leading-9">
               What’s on your mind
             </div>
             <div className="text-zinc-900 text-6xl font-semibold font-['Manrope'] leading-[66px]">
@@ -30,7 +30,7 @@ const amasection = () => {
             </div>
             <div className="self-stretch h-20 flex-col justify-start items-start gap-6 flex">
               <div className="self-stretch justify-between items-center inline-flex">
-                <div className="text-zinc-900 text-xl font-semibold font-['Manrope'] leading-7">
+                <div className="text-zinc-900 text-xl text-left font-semibold font-['Manrope'] leading-7">
                   What’s the guarantee that I will be satisfied
                   <br />
                   with the hired talent?
@@ -41,12 +41,12 @@ const amasection = () => {
             </div>
             <div className="self-stretch h-[154px] flex-col justify-start items-start gap-6 flex">
               <div className="self-stretch justify-between items-center inline-flex">
-                <div className="text-zinc-900 text-xl font-semibold font-['Manrope'] leading-7">
+                <div className="text-zinc-900 text-xl text-left font-semibold font-['Manrope'] leading-7">
                   Can I hire multiple talents at once?
                 </div>
                 <div className="w-6 h-6 relative" />
               </div>
-              <div className="self-stretch h-[78px] text-gray-500 text-[15px] font-normal font-['Manrope'] leading-normal">
+              <div className="self-stretch h-[78px] text-gray-500 text-[15px] font-normal font-['Manrope'] text-left leading-normal">
                 If unhappy with a project, communicate with the freelancer,
                 allow for revisions, and refer to the agreement. Escalate to
                 platform support if needed, considering mediation. Review
@@ -56,7 +56,7 @@ const amasection = () => {
             </div>
             <div className="self-stretch h-[52px] flex-col justify-start items-start gap-6 flex">
               <div className="self-stretch justify-between items-center inline-flex">
-                <div className="text-zinc-900 text-xl font-semibold font-['Manrope'] leading-7">
+                <div className="text-zinc-900 text-xl text-left font-semibold font-['Manrope'] leading-7">
                   Why should I not go to an agency directly?
                 </div>
                 <div className="w-6 h-6 relative" />
@@ -65,7 +65,7 @@ const amasection = () => {
             </div>
             <div className="self-stretch h-14 flex-col justify-start items-start gap-6 flex">
               <div className="self-stretch justify-between items-center inline-flex">
-                <div className="w-[446px] text-zinc-900 text-xl font-semibold font-['Manrope'] leading-7">
+                <div className="w-[446px] text-zinc-900 text-left text-xl font-semibold font-['Manrope'] leading-7">
                   Who can help me pick a right skillset
                   <br />
                   and duration for me?
