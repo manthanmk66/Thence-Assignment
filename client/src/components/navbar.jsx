@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/Vector.png";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -9,9 +10,12 @@ const Navbar = () => {
         <div className="w-[127.94px] h-[47.39px] relative" />
         <div className="justify-end items-center gap-[15.67px] flex">
           <div className="px-[41.78px] py-[26.11px] rounded-[107.06px] border border-gray-200 justify-center items-center gap-[5.22px] flex">
-            <div className="text-center text-zinc-900 text-lg font-medium font-['Manrope'] capitalize">
+            <NavLink
+              to="/signup"
+              className="text-center text-zinc-900 text-lg font-medium font-['Manrope'] capitalize"
+            >
               Get projects
-            </div>
+            </NavLink>
           </div>
           <div className="pl-[41.78px] pr-[49.61px] py-[26.11px] bg-zinc-900 rounded-[107.06px] justify-center items-center gap-[15.67px] flex">
             <div className="text-center text-white text-lg font-semibold font-['Manrope'] capitalize">

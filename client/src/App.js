@@ -1,17 +1,22 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Navbar from "./components/navbar";
+
 import HeroSection from "./components/herosection";
-import AMASection from "./components/amasection";
-import Footer from "./components/footer";
+import Submission from "./pages/submission";
+
+import Signup from "../src/pages/signup"; // Assuming the correct path
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <HeroSection />
-      <AMASection />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HeroSection />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/submission" element={<Submission />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

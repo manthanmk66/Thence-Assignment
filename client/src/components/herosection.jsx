@@ -1,9 +1,14 @@
 import React from "react";
 import Model from "../assets/image 32618.png";
+import AMASection from "./amasection";
+import Footer from "./footer";
+import Navbar from "./navbar";
+
 
 const Herosection = () => {
   return (
     <div>
+      <Navbar />
       <div className="w-[1440px] h-[1044px] relative">
         <div className="w-[79.69px] h-[79.69px] left-[603px] top-[439px] absolute">
           <div className="w-[79.69px] h-[79.69px] left-0 top-0 absolute bg-white rounded-full" />
@@ -83,6 +88,8 @@ const Herosection = () => {
           </div>
         </div>
       </div>
+      <AMASection />
+      <Footer />
     </div>
   );
 };
