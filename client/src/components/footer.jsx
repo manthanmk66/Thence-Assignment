@@ -3,7 +3,7 @@ import { FaRegCopyright } from "react-icons/fa6";
 
 const footer = () => {
   return (
-    <div>
+    <div className="mb-2">
       <div className="w-[1376px] h-36 p-[60px] bg-neutral-100 rounded-[40px] flex-col justify-between items-center inline-flex">
         <div className="flex-col justify-start items-center gap-[77px] flex">
           <div className="flex-col justify-start items-center gap-8 flex">

@@ -3,13 +3,21 @@ import Model from "../assets/image 32618.png";
 import AMASection from "./amasection";
 import Footer from "./footer";
 import Navbar from "./navbar";
-
+import Frame from "../assets/square.png";
+import Spark from "../assets/spark.png";
 
 const Herosection = () => {
   return (
     <div>
       <Navbar />
       <div className="w-[1440px] h-[1044px] relative">
+        {/* Positioning the Frame image at the top left corner */}
+        <img
+          src={Frame}
+          alt="FrameImage"
+          className="absolute top-0 left-0 w-[100px] h-[100px]"
+        />
+
         <div className="w-[79.69px] h-[79.69px] left-[603px] top-[439px] absolute">
           <div className="w-[79.69px] h-[79.69px] left-0 top-0 absolute bg-white rounded-full" />
           <div className="w-10 h-10 px-[2.50px] pt-[2.50px] pb-[6.25px] left-[20px] top-[20.50px] absolute justify-center items-center inline-flex" />
@@ -20,11 +28,11 @@ const Herosection = () => {
               Success stories
             </div>
             {/* <h1 className="text-xl font-Switzer">This is for Testing Fonts</h1> */}
-            <div className="w-[588px]  text-left text-zinc-900 text-[56px] font-semibold whitespace-nowrap  font-Manrope leading-[67.20px]">
+            <div className="w-[588px]  text-center text-zinc-900 text-[50px] font-semibold whitespace-nowrap  font-Manrope leading-[67.20px]">
               Every success journey
             </div>
             <div>
-              <span className="w-[588px]  text-left text-zinc-900 text-[56px] font-semibold   font-Manrope leading-[67.20px]">
+              <span className="w-[588px]  text-left text-zinc-900 text-[50px] font-semibold   font-Manrope leading-[67.20px]">
                 we've encountered.
               </span>
             </div>
@@ -80,7 +88,7 @@ const Herosection = () => {
             <div className="w-[10.75px] h-[10.75px] bg-neutral-200 rounded-full" />
             <div className="w-[10.75px] h-[10.75px] bg-neutral-200 rounded-full" />
           </div>
-          <div className="w-[245px] h-[88px] px-10 py-[31px] left-[835px] top-[749px] absolute bg-zinc-900 rounded-[100px] justify-center items-center gap-4 inline-flex">
+          <div className="w-[245px] h-[88px] px-10 py-[31px] left-[835px] top-[749px] absolute bg-zinc-900 hover:bg-neutral-600 rounded-[100px] justify-center items-center gap-4 inline-flex">
             <div className="text-center text-white text-xl font-semibold font-Manrope capitalize">
               Explore more
             </div>

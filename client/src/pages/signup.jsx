@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import logo from "../assets/Vector.png";
 import { useNavigate } from "react-router-dom";
-
+import { RxCross1 } from "react-icons/rx";
 import Alert from "../assets/alert.png";
+import toast, { Toaster } from "react-hot-toast";
 
 const Signup = () => {
   const Navigate = useNavigate();
@@ -63,8 +64,13 @@ const Signup = () => {
     }
   };
 
+  const crossHandler = () => {
+    Navigate("/");
+  };
+
   return (
     <div className="flex flex-col items-center justify-center h-screen">
+      <Toaster />
       <div className="w-[1392px] h-[90.17px] pl-[52.22px] pr-[20.89px] pt-[13.97px] bg-white/opacity-80 rounded-[65.28px]  backdrop-blur-[31.33px] justify-between items-center inline-flex">
         <img className="" src={logo} alt="logo"></img>
       </div>
@@ -132,6 +138,12 @@ const Signup = () => {
             </button>
           </form>
         </div>
+      </div>
+      <div
+        onClick={crossHandler}
+        className="p-4 cursor-pointer left-[1324px] top-[32px] absolute rounded-[40px] border border-stone-300 justify-start items-start gap-2.5 inline-flex"
+      >
+        <RxCross1 />
       </div>
     </div>
   );

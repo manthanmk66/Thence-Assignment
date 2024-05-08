@@ -1,16 +1,40 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../assets/Vector.png";
+import { useNavigate } from "react-router-dom";
+import TickMark from "../assets/tick.png";
 
 const Submission = () => {
+  const Navigate = useNavigate();
+  const [countdown, setCountdown] = useState(5);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCountdown((prevCountdown) => prevCountdown - 1);
+    }, 1000);
+
+    // Redirect when countdown reaches 0
+    if (countdown === 0) {
+      clearInterval(timer);
+      Navigate("/");
+    }
+
+    return () => clearInterval(timer); // Cleanup on unmount
+  }, [countdown]);
+
   return (
-    <div className="flex flex-col items-center justify-center  h-screen mt-[-11vh]">
-      <div className="w-[1392px] h-[60.17px] pl-[52.22px] pr-[20.89px] pt-[19.97px]  bg-white/opacity-80 rounded-[65.28px] backdrop-blur-[31.33px] justify-between items-center inline-flex mt-[-20vh]">
+    <div className="flex flex-col items-center justify-center h-screen mt-[-11vh]">
+      <div className="w-[1392px] h-[60.17px] pl-[52.22px] pr-[20.89px] pt-[19.97px] bg-white/opacity-80 rounded-[65.28px] backdrop-blur-[31.33px] justify-between items-center inline-flex mt-[-10vh]">
         <img className="" src={logo} alt="logo"></img>
       </div>
       <div className="w-[718px] h-[357px] flex-col justify-start items-center gap-[41px] inline-flex">
         <div className="justify-start items-start gap-[25px] inline-flex">
-          <div className="w-20 h-20 relative">
-            <div className="w-14 h-14 left-[12.50px] top-[12.50px] absolute bg-white rounded-full" />
+          <div className="w-20 pt-16 h-20 relative">
+            <img
+              src={TickMark}
+              height={"45px"}
+              width={"45px"}
+              alt="TickMark img"
+            />
           </div>
         </div>
         <div className="self-stretch h-[236px] flex-col justify-start items-center gap-4 flex">
@@ -60,7 +84,7 @@ const Submission = () => {
               lineHeight: "normal",
             }}
           >
-            5 Seconds
+            {countdown} Seconds
           </span>
         </div>
       </div>
