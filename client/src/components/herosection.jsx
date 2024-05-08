@@ -3,21 +3,14 @@ import Model from "../assets/image 32618.png";
 import AMASection from "./amasection";
 import Footer from "./footer";
 import Navbar from "./navbar";
-import Frame from "../assets/square.png";
 import Spark from "../assets/spark.png";
+import Rocket from "../assets/rocket.png";
 
 const Herosection = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Navbar />
       <div className="w-[1440px] h-[1044px] relative">
-        {/* Positioning the Frame image at the top left corner */}
-        <img
-          src={Frame}
-          alt="FrameImage"
-          className="absolute top-0 left-0 w-[100px] h-[100px]"
-        />
-
         <div className="w-[79.69px] h-[79.69px] left-[603px] top-[439px] absolute">
           <div className="w-[79.69px] h-[79.69px] left-0 top-0 absolute bg-white rounded-full" />
           <div className="w-10 h-10 px-[2.50px] pt-[2.50px] pb-[6.25px] left-[20px] top-[20.50px] absolute justify-center items-center inline-flex" />
@@ -47,7 +40,10 @@ const Herosection = () => {
             </div>
             <div className="w-[245px] h-[88px] pl-4 pr-8 py-4 left-[86.19px] top-[412.71px] absolute bg-white rounded-[111.54px] shadow backdrop-blur-[50.70px] justify-start items-center gap-3.5 inline-flex">
               <div className="w-[52px] h-[52px] relative">
-                <div className="w-[52px] h-[52px] left-0 top-0 absolute opacity-40 bg-neutral-200 rounded-full" />
+                <img
+                  src={Rocket}
+                  className="w-[52px] h-[52px] left-0 top-0 absolute opacity-100 bg-neutral-200 rounded-full"
+                />
                 <div className="w-8 h-8 pl-[3px] pr-1 pt-1 pb-[3px] left-[10px] top-[10px] absolute justify-center items-center inline-flex" />
               </div>
               <div className="flex-col justify-center items-start gap-0.5 inline-flex">
@@ -73,7 +69,10 @@ const Herosection = () => {
               </div>
             </div>
             <div className="w-[267.82px] h-[239px] p-[30px] left-0 top-[114px] absolute bg-white rounded-[27.11px] shadow flex-col justify-start items-start gap-2.5 inline-flex">
-              <div className="w-[79.17px] h-[78.48px] relative origin-top-left rotate-[-21.27deg]" />
+              {/* <img
+                src={Spark}
+                className="w-[79.17px] h-[78.48px] relative origin-top-left rotate-[-21.27deg]"
+              /> */}
               <div className="text-zinc-900 text-[64px] font-medium leading-[76.80px] font-Switzer">
                 40%
               </div>

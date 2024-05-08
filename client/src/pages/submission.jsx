@@ -18,7 +18,7 @@ const Submission = () => {
       Navigate("/");
     }
 
-    return () => clearInterval(timer); // Cleanup on unmount
+    return () => clearInterval(timer); 
   }, [countdown]);
 
   return (

@@ -12,7 +12,7 @@ const Signup = () => {
     email: "",
   });
 
-  const [formSubmitted, setFormSubmitted] = useState(false); // State variable to track form submission
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,46 +21,33 @@ const Signup = () => {
       [name]: value,
     });
   };
-
-  // Function to validate email format
   const validateEmail = (email) => {
     const re = /\S+@\S+\.\S+/;
     return re.test(email);
   };
-
-  // Function to check if email is valid
   const isEmailValid = () => {
     return validateEmail(formData.email);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Check if name and email fields are not empty and if the email is in a valid format
     if (
       formData.name.trim() !== "" &&
       formData.email.trim() !== "" &&
       isEmailValid()
     ) {
-      // Add your signup logic here, e.g., sending data to a server
+      //here We can make Api calls here
       console.log("Form submitted with data:", formData);
-
-      // Set formSubmitted to true after form submission
       setFormSubmitted(true);
-
-      // Reset form fields after submission
       setFormData({
         name: "",
         email: "",
       });
-
-      // Redirect user to submission page
       Navigate("/submission");
     } else {
-      // If name or email fields are empty or email is not valid, show error message
-      // You can also show error message using state variables and conditionally render it in the JSX
+      // If name or email fields are empty or email is not valid
       console.log("Please enter valid name and email.");
-      setFormSubmitted(true); // Set formSubmitted to true to trigger error UI rendering
+      setFormSubmitted(true);
     }
   };
 
@@ -69,7 +56,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
+    <div className="flex flex-col items-center justify-center h-screen mb-10 ">
       <Toaster />
       <div className="w-[1392px] h-[90.17px] pl-[52.22px] pr-[20.89px] pt-[13.97px] bg-white/opacity-80 rounded-[65.28px]  backdrop-blur-[31.33px] justify-between items-center inline-flex">
         <img className="" src={logo} alt="logo"></img>
@@ -106,26 +93,25 @@ const Signup = () => {
                   className="text-neutral-500 bg-zinc-100 text-xl font-medium font-['Manrope'] w-full outline-none"
                 />
               </div>
-              {formSubmitted &&
-                !isEmailValid() && ( // Show the validation message if form is submitted and email is not valid
-                  <div className="flex gap-0">
-                    <img
-                      className="w-4 h-4 ml-2 relative mt-1"
-                      src={Alert}
-                      alt="Alert"
-                    ></img>
-                    <div className="w-[225px] h-[22px] justify-start items-center  inline-flex">
-                      <div className="w-5 h-5 relative">
-                        <div className="w-4 h-4  top-[2px] absolute">
-                          <div className="w-[3.20px] h-2 left-[6.40px] top-[4px] absolute bg-white" />
-                        </div>
-                      </div>
-                      <div className=" text-red-600 text-base font-medium font-['Manrope']">
-                        Enter a valid email address
+              {formSubmitted && !isEmailValid() && (
+                <div className="flex gap-0">
+                  <img
+                    className="w-4 h-4 ml-2 relative mt-1"
+                    src={Alert}
+                    alt="Alert"
+                  ></img>
+                  <div className="w-[225px] h-[22px] justify-start items-center  inline-flex">
+                    <div className="w-5 h-5 relative">
+                      <div className="w-4 h-4  top-[2px] absolute">
+                        <div className="w-[3.20px] h-2 left-[6.40px] top-[4px] absolute bg-white" />
                       </div>
                     </div>
+                    <div className=" text-red-600 text-base font-medium font-['Manrope']">
+                      Enter a valid email address
+                    </div>
                   </div>
-                )}
+                </div>
+              )}
             </div>
 
             <button
